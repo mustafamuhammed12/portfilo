@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" 
+integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" 
+crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> 
+    <title>Document</title>
+</head>
+<body style="overflow:auto;">
+    <div class="navigation">
+        <div class='title text-primary'><a href="home.html" style="text-decoration:none; cursor: pointer;">mustafa</a></div>
+         
+        <div class='navbar' id='nav'>
+        <li><a  class='links' href="home.html">Home</a></li>
+        <li><a  class='links '  href="about.html">About</a></li>
+        <li><a  class='links' href="skills.html">Skill</a></li>
+        <li>
+        <a  class='links ' href="projects.html">Projects</a></li>
+       <li>
+        <a  class='links active_link'  href="contact.html">Contact</a></li>
+        </div>
+        <div class='hambarger' id='ham' onclick='document.querySelector(".navigation").classList.toggle("active");'>
+            <span class='one'></span>
+            <span class='two'></span>
+            <span class='three'></span>
+        </div>
+    </div> 
+
+ <main class="contact">
+    <form class='card main rounded-none border' onsubmit="send();reset(); return false;" >
+               
+               <p class='title p-2 ' style="font-weight:700;">Messages or Suggestions</p>
+               <p class="pb-3">If you have any question or suggestion please send it to me!</p>
+              <div class='form-group'>
+               <input class='w-100 input-cotrol' id="email_name" placeholder='Your Name' >
+              </div>
+              <div class='form-group'>
+               <input class='w-100 input-cotrol' id="email" placeholder='Your Email address' >
+              </div>
+              <div class='form-group'>
+                <textarea class='w-100 input-cotrol email_body' id="email_body" placeholder='Your Message' cols="30" rows="10"></textarea>
+              </div>
+              <div class='form-group'>
+               <button class="btn btn-primary">submit</button>
+              </div>
+             
+              <div class='contact-card'>
+                       <div class='Con-content d-flex'>
+                            <i class="bi bi-telephone"></i>
+                    
+                       <p>0750 3680084</p>
+                       </div>
+                       <a href="https://www.facebook.com/aro.arez.395/" target="_blank" style="text-decoration: none; cursor: pointer;" class='Con-content d-flex'>
+                        <i class="fa fa-facebook"></i>
+                       <p>Follow me on facebook</p>
+                       </a>
+                       <a href="https://www.instagram.com/mstafam.khoshnaw/" target="_blank" style="text-decoration: none; cursor: pointer;" class='Con-content d-flex'>
+                        <i class="fa fa-instagram"></i>
+                       <p>Follow me on Instagram</p>
+                       </a>
+
+                       
+                       <a href="https://www.linkedin.com/in/mstafa-mhamad-50928a256/" target="_blank" style="text-decoration: none; cursor: pointer;" class='Con-content d-flex'>
+                        <img class="bi" src="./images/kinkedin.png" alt="">
+                       <p>Follow me on Linkedin</p>
+                       </a>
+                       
+                       <a href="https://github.com/mustafamuhammed12" target="_blank" style="text-decoration: none; cursor: pointer;" class='Con-content d-flex'>
+                        <i class="fa fa-github" style="font-size: 50px !important;"></i>
+                       <p>Check my Github Profile</p>
+                       </a>
+                                
+                       <a href="mailto:mstafamhamad036@gmail.com" style="text-decoration: none; cursor: pointer; color:white !important;" class='Con-content d-flex'>
+                        <i class="bi bi-envelope"></i>
+                        <p>mustafa muhammed@gmail.com</p>
+                       </a>
+                   </div>
+                </form>
+
+ </main>   
+</body>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+<script>
+    function send(){
+        Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "mstafamhamad036@gmail.com",
+    Password : "1169C789AA0C218E634EE29EEBE025C1C52A",
+    To : document.getElementById('email').value,
+    From : "mstafamhamad036@gmail.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+    }
+    
+</script>
+
+
+</html>

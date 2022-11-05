@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" 
+integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" 
+crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body style="overflow:auto!important;">
+    <div class="navigation">
+      <div class='title text-primary'><a href="home.html" style="text-decoration:none; cursor: pointer;">mustafa</a></div>
+        
+        <div class='navbar' id='nav'>
+        <li><a  class='links' href="home.html">Home</a></li>
+        <li><a  class='links '  href="about.html">About</a></li>
+        <li><a  class='links' href="skills.html">Skill</a></li>
+        <li>
+        <a  class='links active_link' href="projects.html">Projects</a></li>
+       <li>
+        <a  class='links '  href="contact.html">Contact</a></li>
+        </div>
+        <div class='hambarger' id='ham' onclick='document.querySelector(".navigation").classList.toggle("active");'>
+            <span class='one'></span>
+            <span class='two'></span>
+            <span class='three'></span>
+        </div>
+    </div> 
+
+ <main class="projects">
+    <div class="container">
+        <h1 class="text-light mb-5 my-project">my projects</h1>
+        <div class="projects-grid">
+
+            <div class="project-fixed w-100 h-100">
+                <div class="card bg-none projects-items">
+                    <img src="./images/shoes store 2.PNG" class="w-100 h-100"  alt="">
+                    <div class="card-text d-none">
+                      <h3>Shoes Store</h3>
+                      <p>simple Shoes Store app for shoes selling and buying online.</h3>
+                        <h3>Technologies used in:</h3>
+                      <P>Html <br> CSS <br>JavaScript <br> Bootstrap  
+                      </P>
+                    </div>
+                  </div>
+            </div>
+
+
+            <div class="project-fixed w-100 h-100">
+                <div class="card bg-none projects-items">
+                    <img src="./images/calculator.c5f1f5a8e98ca9319677.png" class="w-100 h-100"  alt="">
+                    <div class="card-text d-none">
+                      <h3>Calculator</h3>
+                      <p>Simple Calculator created using Reactjs and CSS.</p>
+                      <h3>Technologies used in:</h3>
+                      <P>React <br> CSS
+                      </P>
+                    </div>
+                  </div>
+            </div>
+
+
+            <div class="project-fixed w-100 h-100">
+                <div class="card bg-none projects-items">
+                    <img src="./images/weather.PNG" class="w-100 h-100"  alt="">
+                    <div class="card-text d-none">
+                      <h3>weather</h3>
+                      <p>Simple weather app that show current temperature of location , created useing react and API.</p>
+                      <h3>Technologies used in:</h3>
+                      <P>React <br> CSS <br> Bootstrap <br> Third Party API
+                      </P>
+                    </div>
+                  </div>
+            </div>
+
+
+
+            <div class="project-fixed w-100 h-100">
+                <div class="card bg-none projects-items">
+                    <img src="./images/employment.PNG" class="w-100 h-100"  alt="">
+                    <div class="card-text d-none">
+                      <h3>Employee Management System</h3>
+                      <p>Employee Management System for creating, viewing, updating, and deleting each employment record</p>
+                      <h3>Technologies used in:</h3>
+                      <P>React <br> CSS <br> Bootstrap 
+                      </P>
+                    </div>
+                  </div>
+            </div>
+            
+        </div>
+    </div>
+ </main>   
+</body>
+<script>
+    const x=document.querySelectorAll('.project-fixed');
+    x.forEach(node => {
+        node.addEventListener('click',()=>{
+            node.classList.add('active');
+        })
+    });
+    document.addEventListener('click', function handleClickOutsideBox(event) {
+  const box = document.querySelectorAll('.project-fixed.active .card');
+   console.log(event.target);
+   box.forEach(node=>{
+    if (!node.contains(event.target)) {
+        console.log('clicked');
+    const p= document.querySelectorAll('.project-fixed');
+    p.forEach(node=>{
+        node.classList.remove('active');
+    })
+    
+    
+  }
+   })
+  
+});
+</script>
+
+
+</html>
